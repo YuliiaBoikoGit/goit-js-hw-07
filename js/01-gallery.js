@@ -24,9 +24,20 @@ function createGalleryItemsMarkup(galleryItems) {
     }).join('');
 };
 
-galleryItemsContainer.addEventListener('click', (event) => {
+function onGalleryItemsContainerClick(event) {
     event.preventDefault();
-});
+
+    const isImageEl = event.target.classList.contains('gallery__image');
+
+    if (!isImageEl) return;
+
+    const imageElUrl = event.target.dataset.source;
+
+};
+
+galleryItemsContainer.addEventListener('click', onGalleryItemsContainerClick);
+
+
 
 
 

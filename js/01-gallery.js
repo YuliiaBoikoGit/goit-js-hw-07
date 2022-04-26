@@ -33,11 +33,10 @@ function onGalleryItemsContainerClick(event) {
 
     const imageElUrl = event.target.dataset.source;
 
+    basicLightbox.create(`
+		<img width="1400" height="900" src="${imageElUrl}">
+	`).show();
 };
 
 galleryItemsContainer.addEventListener('click', onGalleryItemsContainerClick);
-
-
-
-
 

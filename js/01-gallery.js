@@ -25,22 +25,20 @@ function createGalleryItemsMarkup(galleryItems) {
 };
 
 function onGalleryItemsContainerClick(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const isImageEl = event.target.classList.contains('gallery__image');
+  const isImageEl = event.target.classList.contains('gallery__image');
 
-    if (!isImageEl) return;
+  if (!isImageEl) return;
 
-    const imageElUrl = event.target.dataset.source;
+  const imageElUrl = event.target.dataset.source;
 
-    const lightboxItem = basicLightbox.create(`
+  const lightboxItem = basicLightbox.create(`
 		<img src="${imageElUrl}">
 	`);
 
-    lightboxItem.show();
-   
+  lightboxItem.show();
 };
-
 
 galleryItemsContainer.addEventListener('click', onGalleryItemsContainerClick);
 
